@@ -45,16 +45,14 @@ begin --arch
 			i <= i + 1;
 			if (s0(0) = '0') then --if2
 			
-				s := ("000000"&( '0' & s0(N+1 downto 1)));                  --
+				s := ("000000"&( '0' & s0(N+1 downto 1)));
 				
 			else
 			
-				s := ("000000"&( '0' & s1(N+1 downto 1)));                        --   (;
+				s := ("000000"&( '0' & s1(N+1 downto 1)));
 				
 			end if; --if2
 			
-		--else
-		--	s <= s;
 		end if; --if1
 
 	end process;
