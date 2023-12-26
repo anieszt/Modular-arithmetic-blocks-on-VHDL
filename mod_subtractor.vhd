@@ -5,8 +5,8 @@ use ieee.numeric_std.all;
 entity mod_subtractor is
 
 	generic(
-		N : natural := 8;
-		P : unsigned := "100000001"		
+		N : natural := 16;
+		P : unsigned := "10000000000000001"		
 	);
 	
 	port(

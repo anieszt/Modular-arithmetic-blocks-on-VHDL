@@ -6,17 +6,17 @@ entity mod_art is
 
 --(P,N)=(257,8), (1031,10)
 
-	generic(N : integer := 8);
+	generic(N : integer := 16);
 	port(
 		clk, rst: in std_logic;
 		a, b : in unsigned(N-1 downto 0);
-		adder_r, subtr_r : out unsigned(N-1 downto 0);
-		mult_r : out unsigned(N downto 0);
+		adder_r, subtr_r: out unsigned(N-1 downto 0);
+		mult_r : out unsigned(N downto 0)
 		
 		--debug:
-		ii: out integer;
-		ss, ss1, sstate: out unsigned(N downto 0);
-		ss0 : out unsigned(2*N-1 downto 0)
+	--	ii: out integer;
+	--	: out unsigned(N downto 0);
+	--	ss0,ss, ss1, sstate : out unsigned(2*N-1 downto 0)
 	);
 	
 end mod_art;
@@ -49,12 +49,12 @@ begin
 			rst => rst,
 			mult_a =>a,
 			mult_b =>b,
-			r => mult_r,
+			r => mult_r
 			--debug:
-			ii => ii,
-			ss => ss,
-			ss0 => ss0,
-			ss1 => ss1
+		--	ii => ii,
+		--	ss => ss,
+		--	ss0 => ss0,
+		--	ss1 => ss1
 	
 		);
 		

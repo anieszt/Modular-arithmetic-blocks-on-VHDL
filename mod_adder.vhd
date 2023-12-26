@@ -5,8 +5,8 @@ use ieee.numeric_std.all;
 entity mod_adder is
 
 	generic(
-		N : natural := 8;
-		P : unsigned := "100000001"		
+		N : natural := 16;
+		P : unsigned := "10000000000000001"		
 	);
 	
 	port(
@@ -32,7 +32,7 @@ begin
 		if rst = '1' then 
 	
 			s2 <= (others => '0');
-		
+
 		elsif rising_edge(clk) then
 	
 			if s1 < p then
